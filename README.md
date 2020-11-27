@@ -96,30 +96,17 @@ How to manage releases in a repository [link](https://help.github.com/en/github/
 
 ## Helpful resources
 
-The following link provides helpful information
-- [link](https://github.com/JPrendy/template-repository).
+The install websockets `ws` that we can use in this client server application, see the following npm documentation.
+- [link](https://www.npmjs.com/package/ws).
 
-https://github.com/daltoniam/Starscream
+The following video explains what are websockets and how they work, it is quite helpful.
+- [link](https://www.youtube.com/watch?v=i5OVcTdt_OU).
 
-https://www.raywenderlich.com/861-websockets-on-ios-with-starscream
+The following video is helpful for setting up a websocket application like this one.
+- [link](https://www.youtube.com/watch?v=FduLSXEHLng).
 
+The following socket.io demo application is a good example of websockets and how they can be used.
+- [link](https://socket.io/demos/whiteboard/).
 
-
-To install the websockets, we will use is the following
-
-https://www.npmjs.com/package/ws
-
-npm i ws
-
-
-cd into the folder `server` and run `node index.js`
-
-https://www.youtube.com/watch?v=i5OVcTdt_OU
-
-https://www.youtube.com/watch?v=FduLSXEHLng
-
-https://socket.io/demos/whiteboard/
-
-https://www.npmjs.com/package/ws
-
-https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
+The following is a good Mozilla documentation explaining websockets.
+- [link](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications).
