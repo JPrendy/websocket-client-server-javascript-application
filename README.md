@@ -45,8 +45,7 @@ Two things to note is all the data we are sending is on the `/` request, we can 
 
 <p><img src="images/requestUrl.png" width="300"/></p>
 
-<p><img src="images/requestMessages.png" width="500"/></p
-
+<p><img src="images/requestMessages.png" width="500"/></p>
 
 ## How to run the project locally
 
