@@ -1,8 +1,12 @@
-# template-repository
+# Websocket client server javascript application
 
 ## Description
 
-The existing repository is a template, I can generate new repositories with the same directory structure, branches, and files.
+An application that creates a client server websocket application, which can be used for web and mobile testing of send websocket data.
+
+#### Corresponding project
+
+https://github.com/JPrendy/websocket-starscreams-ios-application
 
 ## Contents
 
@@ -15,19 +19,50 @@ The existing repository is a template, I can generate new repositories with the 
 
 ## Setup Steps
 
-```
-Code here
+Go to the root of the project, open up the terminal and run the following
+
+```javascript
+npm init -y
+npm i ws
 ```
 
-<p><img src="images/exampleImage.png" width="300"/></p>
+You want something like the following in the `index.js` file where everytime we send data via websocket it will be broadcasted to all the other applications that is connected to the same websocket port, for this application we are using `ws://localhost:8082`.
+
+```javascript
+// A client WebSocket broadcasting to every other connected WebSocket clients, excluding itself.
+wss.on('connection', function connection(ws) {
+    ws.on('message', function incoming(data) {
+        wss.clients.forEach(function each(client) {
+            if (client !== ws) {
+                client.send(data);
+            }
+        });
+    });
+});
+```
+
+Two things to note is all the data we are sending is on the `/` request, we can expand this application to return and send different data on different requests, to verify what we are seeing, you will see something in the browser.
+
+<p><img src="images/requestUrl.png" width="300"/></p>
+
+<p><img src="images/requestMessages.png" width="500"/></p
+
 
 ## How to run the project locally
 
-Change into the folder called `server` and run the following in the terminal to launch the Websocket server, so the web client and mobile client can connect to it
+Go to the root of the project, change into the folder called `server` and run the following in the terminal to launch the Websocket server, so the web client and mobile client can connect to it
 
-```
+```javascript
 node index.js
 ```
+
+Drag the `index.html` from the project and drag it in to your browser and you should see something like the following for your url `file:///Users/jamesprendergast/Documents/Github%20Projects/websocket-client-server-javascript-application/index.html`. Open up another window and you will see when you press a button, the content of the other page will also change and your logs on the server will be updated.
+
+You want to see something like the following
+
+<p><img src="images/websocketClient.png" width="300"/></p>
+
+<p><img src="images/websocketLogs.png" width="300"/></p>
 
 ## Tools
 
