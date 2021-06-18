@@ -47,6 +47,18 @@ Two things to note is all the data we are sending is on the `/` request, we can 
 
 <p><img src="images/requestMessages.png" width="500"/></p>
 
+You can also use Postman to send websocket requests, so when we connect to the websocket server `ws://localhost:8082` we can send messages. So if we send a message via Postman, we should also see it also being shown on the client side as well as in our server logs.
+
+<p><img src="images/websocketPostman.png" width="500"/></p>
+
+<p><img src="images/websocketPostmanSentResult.png" width="500"/></p>
+
+<p><img src="images/websocketPostmanLog.png" width="500"/></p>
+
+Once we are connected to the websocket server, we will also see in Postman any received messages that is done from the client side. So, when we press the button that sends `Sample Message 1` it is also shown in the Postman logs.
+
+<p><img src="images/websocketPostmanReceivedMessages.png" width="500"/></p>
+
 ## How to run the project locally
 
 Go to the root of the project, change into the folder called `server` and run the following in the terminal to launch the Websocket server, so the web client and mobile client can connect to it
